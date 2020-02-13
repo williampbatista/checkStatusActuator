@@ -7,18 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProductionReadyApplication {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(ProductionReadyApplication.class, args);
-		
-		SpringApplication app = new SpringApplication(ProductionReadyApplication.class);
-
-		app.setRegisterShutdownHook(false);
-//		app.setWebApplicationType(WebApplicationType.NONE);
-		app.run(args);
-//		CamelSpringBootApplicationController applicationController = applicationContext
-//				.getBean(CamelSpringBootApplicationController.class);
-//		applicationController.run();
-		
-		
+		SpringApplication.run(ProductionReadyApplication.class, args);
 	}
 
 }
