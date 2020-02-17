@@ -39,9 +39,8 @@ public class ApiCheckHealthIndicator implements HealthIndicator {
 	}
 
 	protected int cheackGetEnroll(String url) throws ClientProtocolException, IOException {
-		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);
-		HttpResponse response = client.execute(request);
+		HttpResponse response = new DefaultHttpClient().execute(request);
 
 		return response.getStatusLine().getStatusCode();
 
